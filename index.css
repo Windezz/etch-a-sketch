@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 640px;
+    height: 640px;
+}
+
+button {
+    margin: 10px;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
