@@ -8,7 +8,7 @@ let rown = column-1;
 button.addEventListener('click', () => {
     column = prompt('Enter the grid number (< 100): ');
     if (column > 100) {
-        alert('invalid grid number, grid number should be less than 100');
+        alert('⚠️⚠️Invalid grid number, grid number should be less than 100⚠️⚠️');
     } else {
         rown = column-1;
         console.log(column, rown);
