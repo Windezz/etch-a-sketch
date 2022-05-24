@@ -4,6 +4,23 @@ const rainbow = document.querySelector('#rainbow');
 let column = 16;
 let rown = column-1;
 
+// random function
+const randomBetween = (min, max) => min + Math.floor(Math.random()* (max - min + 1));
+
+// add an eventlistener to the rainbow button
+rainbow.addEventListener('click', () => {
+    const allCols = document.querySelectorAll('.gridCol');
+    allCols.forEach((col) => {
+        let r = randomBetween(0, 255);
+        let g = randomBetween(0, 255);
+        let b = randomBetween(0, 255);
+        col.onmouseover = function() {
+            this.style.backgroundColor = `rgb(${r},${g},${b})`;
+        }
+    })
+})
+
+
 // add an eventlistener to the button 
 button.addEventListener('click', () => {
     column = prompt('Enter the grid number (< 100): ');
