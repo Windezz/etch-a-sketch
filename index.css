@@ -3,6 +3,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     padding: 5px;
+    background-color: chocolate;
 }
 
 #container {
@@ -17,8 +18,21 @@ body {
     height: 640px;
 }
 
-button {
+#grid, #rainbow {
+    font-family: sans-serif; 
+    font-weight: bold;
+    font-size: medium;
     margin: 10px;
     align-self: flex-start;
     justify-self: flex-start;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(25, 255, 25) ;
+    width: 150px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
 }
