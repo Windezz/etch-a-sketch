@@ -33,7 +33,7 @@ body {
     height: 640px;
 }
 
-#grid, #rainbow {
+#grid, #rainbow, #reset {
     font-family: sans-serif; 
     font-weight: bold;
     font-size: medium;

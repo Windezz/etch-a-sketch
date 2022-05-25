@@ -1,6 +1,7 @@
 const container = document.querySelector('#container');
 const button = document.querySelector('#grid');
 const rainbow = document.querySelector('#rainbow');
+const reset = document.querySelector('#reset');
 let column = 16;
 let rown = column-1;
 
@@ -11,11 +12,23 @@ const randomBetween = (min, max) => min + Math.floor(Math.random()* (max - min +
 rainbow.addEventListener('click', () => {
     const allCols = document.querySelectorAll('.gridCol');
     allCols.forEach((col) => {
-        let r = randomBetween(0, 255);
-        let g = randomBetween(0, 255);
-        let b = randomBetween(0, 255);
         col.onmouseover = function() {
-            this.style.backgroundColor = `rgb(${r},${g},${b})`;
+            let r = randomBetween(0, 255);
+            let g = randomBetween(0, 255);
+            let b = randomBetween(0, 255);
+            this.style.backgroundColor = `rgb(${r},${g},${b})`; 
+        }
+    })
+})
+
+// add an eventlistener to the reset button
+reset.addEventListener('click', () => {
+    const allCols = document.querySelectorAll('.gridCol');
+
+    allCols.forEach((col) => {
+        col.style.backgroundColor = 'white';
+        col.onmouseover = function() {
+            this.style.backgroundColor = 'black';
         }
     })
 })
