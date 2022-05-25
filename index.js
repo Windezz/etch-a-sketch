@@ -38,7 +38,11 @@ reset.addEventListener('click', () => {
 button.addEventListener('click', () => {
     column = prompt('Enter the grid number (< 100): ');
     if (column > 100) {
-        alert('⚠️⚠️Invalid grid number, grid number should be less than 100⚠️⚠️');
+        alert('⚠️⚠️Invalid grid number, grid number should be less than 100 and greater than 0⚠️⚠️');
+    } else if (column === null) {
+        alert('Please input a number');
+    } else if(column === "0") {
+        alert('Should not be a zero');
     } else {
         rown = column-1;
         console.log(column, rown);
